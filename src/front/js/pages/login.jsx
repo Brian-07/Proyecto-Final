@@ -1,7 +1,7 @@
 import React from 'react';
 import "/workspace/Proyecto-Final/src/front/styles/Login.css"
 
-const date = new Date();
+
 
 function Login(){
     return <div className= 'container w-25 pt-5'>

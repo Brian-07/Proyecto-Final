@@ -11,7 +11,7 @@ export const Navbar = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
 	<Link to={"/home/"}>
-	<h2 className="navbar-brand ms-2">PetShop Café</h2>
+	<h2 className="navbar-brand ms-2 mt-2">PetShop Café</h2>
 	</Link>
 	</div>
     <div className="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
