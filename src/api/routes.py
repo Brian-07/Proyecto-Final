@@ -53,7 +53,7 @@ def crear_cuenta():
         return jsonify({"msg": None,"data" : user.serialize()}),201
 
     except:
-        return jsonify({"msg": "Error! Usuario ya existente!"}), 400
+        return jsonify({"msg": "Error! Usuario/Email ya existente!"}), 400
 
 @api.route('/login', methods=["POST"])
 def login():
@@ -66,15 +66,15 @@ def login():
     
     users = User.query.filter_by(email = email).all()
     if(len(users)==0):
-        return jsonify({"msg":"El usuario con mail "+email+" no existe","data": None})
+        return jsonify({"msg":"El usuario con mail "+email+" no existe","data": None}),400
     user = users[0]
     hash = user.password
 
     isValid = bcrypt.check_password_hash(hash, password)
     
     if not isValid:
-        return jsonify({"msg":"Clave incorrecta","data": None})
+        return jsonify({"msg":"Clave incorrecta","data": None}),400
 
     token = create_access_token(identity={"rol": "usuario", "data": user.serialize()})
-    return jsonify({"msg": None ,"data":token})    
+    return jsonify({"msg": None ,"data":token}),200    
     pass

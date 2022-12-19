@@ -17,7 +17,7 @@ export const ContactaNosotros = () => {
             helpdesk@gstudio.com para cualquier problema que tenga.
           </p>
           <div className=" mb-3">
-            <label for="lastName" className="form-label">
+            <label htmlFor="lastName" className="form-label">
               Nombre y Apellidos:<span className="text-muted"></span>
             </label>
             <input
@@ -32,7 +32,7 @@ export const ContactaNosotros = () => {
             </div>
           </div>
           <div className="mb-3">
-            <label for="exampleFormControlInput1" className="form-label">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
               Email:
             </label>
             <input
@@ -43,7 +43,7 @@ export const ContactaNosotros = () => {
             />
           </div>
           <div className="mb-5">
-            <label for="exampleFormControlTextarea1" className="form-label">
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">
               Escriba su mensaje aquí:
             </label>
             <textarea

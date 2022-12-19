@@ -8,9 +8,9 @@ export const DatosPersonales = () => {
       </div>
       <div className="card bg-light mb-3 rounded-3 border-primary">
         <div className="card-body">
-          <form className="row g-3 needs-validation" novalidate>
+          <form className="row g-3 needs-validation" noValidate>
             <div className="col-md-4">
-              <label for="validationCustom01" className="form-label">
+              <label htmlFor="validationCustom01" className="form-label">
                 Nombre
               </label>
               <input
@@ -22,7 +22,7 @@ export const DatosPersonales = () => {
               <div className="valid-feedback">Looks good!</div>
             </div>
             <div className="col-md-4">
-              <label for="validationCustom02" className="form-label">
+              <label htmlFor="validationCustom02" className="form-label">
                 Apellido
               </label>
               <input
@@ -34,7 +34,7 @@ export const DatosPersonales = () => {
               <div className="valid-feedback">Looks good!</div>
             </div>
             <div className="col-md-4">
-              <label for="inputEmail4" className="form-label">
+              <label htmlFor="inputEmail4" className="form-label">
                 Email
               </label>
               <div className="input-group has-validation">
@@ -50,7 +50,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <label for="validationCustom03" className="form-label">
+              <label htmlFor="validationCustom03" className="form-label">
                 Domicilio
               </label>
               <input
@@ -65,7 +65,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <label for="validationCustom04" className="form-label">
+              <label htmlFor="validationCustom04" className="form-label">
                 Localidad
               </label>
               <input
@@ -79,7 +79,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <label for="validationCustom05" className="form-label">
+              <label htmlFor="validationCustom05" className="form-label">
                 Código Postal
               </label>
               <input
@@ -93,7 +93,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <label for="validationCustom06" className="form-label">
+              <label htmlFor="validationCustom06" className="form-label">
                 Provincia
               </label>
               <input
@@ -107,7 +107,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <label for="validationCustom07" className="form-label">
+              <label htmlFor="validationCustom07" className="form-label">
                 Móvil
               </label>
               <input
@@ -121,7 +121,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-2">
-              <label for="validationCustom08" className="form-label">
+              <label htmlFor="validationCustom08" className="form-label">
                 Tipo de documento
               </label>
               <select className="form-select" id="validationCustom08" required>
@@ -137,7 +137,7 @@ export const DatosPersonales = () => {
               </div>
             </div>
             <div className="col-md-3">
-              <label for="validationCustom09" className="form-label">
+              <label htmlFor="validationCustom09" className="form-label">
                 Número
               </label>
               <input
