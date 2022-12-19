@@ -1,6 +1,6 @@
 import React from "react";
 import CardMisArticulos from "../component/cardMisArticulos.jsx";
-import "/workspace/Proyecto-Final/src/front/styles/misArticulos.css"
+import "../../styles/misArticulos.css";
 
 function MisArticulos() {
     return(

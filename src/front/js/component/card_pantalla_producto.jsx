@@ -1,5 +1,5 @@
 import React from 'react';
-import "/workspace/Proyecto-Final/src/front/styles/pantalla_de_productos.css"
+import "../../styles/pantalla_de_productos.css"
 
 function CardPantallaDeProducto(){
     return(

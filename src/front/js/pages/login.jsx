@@ -1,5 +1,5 @@
 import React from "react";
-import "/workspace/Proyecto-Final/src/front/styles/Login.css";
+import "../../styles/Login.css";
 import logo from "../../img/logo.png";
 import { Link } from 'react-router-dom';
 

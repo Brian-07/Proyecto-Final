@@ -1,6 +1,6 @@
 import React from "react";
 import CardFavoritos from "../component/favoritos.jsx"
-import "/workspace/Proyecto-Final/src/front/styles/favoritos.css"
+import "../../styles/favoritos.css"
 
 function Favoritos() {
     return(
