@@ -10,3 +10,9 @@ body{
         user-select: none;
 
 }
+.titulo-login{
+        background: rgb(2,172,152);
+        background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}

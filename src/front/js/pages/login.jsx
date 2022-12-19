@@ -1,10 +1,11 @@
 import React from 'react';
-import "/workspace/Proyecto-Final/src/front/styles/Login.css"
+import "../../styles/Login.css"
 
 
 
 function Login(){
-    return <div className= 'container w-25 pt-5'>
+    return <div className='bg-light '>
+      <div className= 'container w-25 pt-5'>
         <main className="form-signin">
   <form>
     <img className="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57 "/>
@@ -27,7 +28,9 @@ function Login(){
     <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
   </form>
 </main>
+      </div>
     </div>
+
 }
 
 export default Login;

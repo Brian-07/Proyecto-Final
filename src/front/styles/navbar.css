@@ -8,3 +8,13 @@ body{
 a{
     text-decoration:none
 }
+.user{
+    color: white;
+}
+.accordion-button{
+    background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+    width: 250px;
+  }
+.accordion-body,.accordion-item{
+    width: 250px;
+}
