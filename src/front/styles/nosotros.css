@@ -1,87 +1,71 @@
-body{
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+.titulo-nosotros {
+  background: rgb(2, 172, 152);
+  background: linear-gradient(
+    230deg,
+    rgba(2, 172, 152, 0.8562018557422969) 0%,
+    rgba(131, 24, 199, 0.65172006302521) 62%,
+    rgba(203, 0, 255, 0.7469581582633054) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* margin-bottom: 650px; */
+  margin-top: 60px;
+}
+.encabezado{
+    background: linear-gradient(
+      230deg,
+      rgba(131, 24, 199, 0.65172006302521) 62%,
+      rgba(203, 0, 255, 0.7469581582633054) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rectangulo1 {
+  /* position: relative; */
+  padding: 10% auto 10% auto;
+  width: 618px;
+  height: 190px;
+  left: 50px;
+  top: 200px;
+  background: #ffffff;
+  border-radius: 17px;
+  display: inline-flex;
+}
+.rectangulo2 {
+  /* position: absolute; */
+  width: 326px;
+  height: 210px;
+  left: 900px;
+  top: 361px;
+  background: #ffffff;
+  border-radius: 17px;
+}
+.rectangulo3 {
+  /* position: absolute; */
+  width: 402px;
+  height: 170px;
+  left: 600px;
+  top: 609px;
+  background: #ffffff;
+  border-radius: 34px;
+}
+.img1 {
+  /* position: absolute; */
+  width: 220px;
+  height: 210px;
+  left: 675px;
+  top: 361px;
+  border-radius: 22px;
+}
+.img2 {
+  /* position: absolute; */
+  width: 315px;
+  height: 265px;
+  left: 280px;
+  top: 513px;
+  border-radius: 20px;
+}
+h3 {
+  margin-bottom: 0;
 }
 
-.botonPreg{
-    margin-bottom: 500px;
-    
-}
-
-.titulo{
-    background: linear-gradient(90deg, #4D058A 0%, #D44CEB 128.97%);
-    border-radius: 24px;
-    margin-top: 50px;
-    margin-bottom: 650px;
-    width: 397px;
-    height: 82px;
-    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 150%;
-    color: #FFFFFF;
-    mix-blend-mode: lighten;
-    border: 1px solid #000000;
-}
-.rectangulo1{
-    position: absolute;
-    width: 500px;
-    height: 230px;
-    left: 90px;
-    top: 165px;
-    background: #FFFFFF;
-    border-radius: 17px;
-}
-.rectangulo2{
-    position: absolute;
-    width: 326px;
-    height: 210px;
-    left: 850px;
-    top: 300px;
-    background: #FFFFFF;
-    border-radius: 17px;
-}
-.rectangulo3{
-    position: absolute;
-    width: 402px;
-    height: 170px;
-    left: 600px;
-    top: 550px;
-    background: #FFFFFF;
-    border-radius: 34px;
-}
-.img1{
-    position: absolute;
-    width: 240px;
-    height: 210px;
-    left: 600px;
-    top: 300px;
-    border-radius: 22px;
-}
-.img2{
-    position: absolute;
-    width: 315px;
-    height: 265px;
-    left: 270px;
-    top:455px;
-    border-radius: 20px;
-}
-h3{
-    margin-bottom: 0;
-}
-.titulo2{
-    background: linear-gradient(90deg, #4D058A 0%, #D44CEB 128.97%);
-    border-radius: 24px;
-    margin-top: 70px;
-    margin-bottom: 50px;
-    width: 600px;
-    height: 82px;
-    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 150%;
-    color: #FFFFFF;
-    mix-blend-mode: lighten;
-    border: 1px solid #000000;
-}

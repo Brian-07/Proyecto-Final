@@ -1,4 +1,6 @@
 body{
+        background: rgb(2,172,152);
+background: radial-gradient(circle, rgba(2,172,152,0.4276304271708683) 0%, rgba(131,24,199,0.0746892507002801) 62%, rgba(203,0,255,0.28757440476190477) 100%);
         font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -10,9 +12,37 @@ body{
         user-select: none;
 
 }
+
 .titulo-login{
         background: rgb(2,172,152);
         background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
+
+.placeholder{
+        width: 300px;
+}
+
+.button-login1:hover{
+        background-image: linear-gradient(to left, #743ad5, #d53a9d);
+    }
+    
+.button-login{
+        background: rgb(2,172,152);
+        background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+        
+}
+.border-gradient {
+        border: 1px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+}
+
+.border-gradient-purple {
+        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+      }
+
+.text-login:hover {
+color: #743ad5 !important;}
+    

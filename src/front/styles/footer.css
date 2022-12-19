@@ -1,9 +1,22 @@
 body{
     font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
+.text-footer:hover {
+    color: #743ad5 !important;}
+
 .icons {
 display: flex;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
+}
+
+.altura{
+    height: 20px;
+}
+
+.logos{
+    background: rgb(2,172,152);
+    background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+
 }

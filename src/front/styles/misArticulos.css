@@ -1,0 +1,28 @@
+.titulo{
+    background: rgb(2,172,152);
+    background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imagen{
+        border: 1px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.btn-custom {
+    background: #743ad5;
+  }
+
+.btn-custom2 {
+    background: red;
+    
+  }
+.button-login1:hover{
+    background-image: linear-gradient(to left, #743ad5 #ee6bf8);
+}
+.button-login2:hover{
+    background-image: linear-gradient(to left, #ff1313, #eb8989);
+}

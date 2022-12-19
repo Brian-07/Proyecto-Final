@@ -1,0 +1,31 @@
+img{
+    width: auto;
+    height: 250px;
+}
+
+.tittle{
+    color: black;
+}
+
+.bg-text{
+    background-color: rgba(84, 19, 135, 1);
+}
+
+.bg-card{
+    background-color: rgba(203,0,255,0.7469581582633054); 
+}
+
+.text-list:hover {
+    color: #743ad5 !important;}
+    
+.text-1{
+    color: rgba(84, 19, 135, 1);
+}
+
+.titulo-articulos{
+    background: rgb(2,172,152);
+    background: linear-gradient(230deg, rgba(2,172,152,0.8562018557422969) 0%, rgba(131,24,199,0.65172006302521) 62%, rgba(203,0,255,0.7469581582633054) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
