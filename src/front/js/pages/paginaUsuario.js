@@ -1,9 +1,58 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import config from "../config";
-
-
+import { useState, useEffect } from "react";
 
 export const PagUsuario = () => {
+  const [disabled, setDisabled] = useState(true);
+  const [detalle, setDetalle] = useState({});
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const tokenObj = localStorage.token;
+    if (!tokenObj) {
+      navigate("/login");
+    } else {
+      try {
+        const tokenData = JSON.parse(tokenObj);
+
+        fetch(`${config.HOSTNAME}/api/privado`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${tokenData.token}`,
+          },
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            if (!data.data) {
+              navigate("/login");
+              return;
+            }
+            setDetalle(data);
+            setDisabled(false);
+          });
+      } catch (e) {
+        navigate("/login");
+        return;
+      }
+    }
+  }, [disabled]);
+  
+  const cerrarSesion = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
+  if (disabled) {
+    return (
+      <div>
+        <h1>Cargando</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <div className="d-flex justify-content-start mt-5">
@@ -26,7 +75,7 @@ export const PagUsuario = () => {
           {/* Carta usuario */}
           <div className="col-3 mt-5 ms-1 text-center">
             <div className="card bg-warning">
-              <h1 className="mt-1">Usuario</h1>
+              <h3 className="mt-1">{detalle.data.email}</h3>
               {/* Imagen usuario */}
               <div className="ms-2">
                 <a
@@ -68,10 +117,11 @@ export const PagUsuario = () => {
           </div>
           {/* Botones */}
           <div className="col-4 mt-5">
-            <button className="btn btn-primary mt-5 p-2" type="submit">
-              Guardar Cambios
-            </button>
-            <button className="btn btn-danger mt-5 ms-3 p-2" type="submit">
+            <button
+              className="btn-lg btn-danger ms-1 mt-4 w-75"
+              type="submit"
+              onClick={cerrarSesion}
+            >
               Cerrar Sesión
             </button>
           </div>

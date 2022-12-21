@@ -5,6 +5,7 @@ import accesorios from "../../img/accesorios.png";
 import accPerro from "../../img/accperro.png";
 import accGato from "../../img/accGato.png";
 import "../../styles/home.css";
+import config from "../config";
 
 export const Home = () => {
   return (
@@ -74,7 +75,7 @@ export const Home = () => {
                 {/* Primera imagen del carousel */}
                 <div>
                   <img
-                    src="https://3000-4geeksacade-reactflaskh-fz45q57shqe.ws-eu79.gitpod.io/accesorios.png"
+                    src={config.IMGURL + "/accesorios.png"}
                     className="d-block accesorios"
                   />
                 </div>
@@ -94,7 +95,7 @@ export const Home = () => {
                 {/* Segunda imagen del carousel */}
                 <div>
                   <img
-                    src="https://3000-4geeksacade-reactflaskh-fz45q57shqe.ws-eu79.gitpod.io/accperro.png"
+                    src={config.IMGURL + "/accperro.png"}
                     className="d-block imagenAccPerro"
                   />
                 </div>
@@ -114,7 +115,7 @@ export const Home = () => {
                 {/* Tercera imagen del carousel */}
                 <div>
                   <img
-                    src="https://3000-4geeksacade-reactflaskh-fz45q57shqe.ws-eu79.gitpod.io/accGato.png"
+                    src={config.IMGURL + "/accGato.png"}
                     className="d-block imagenAccGato"
                     alt="..."
                   />

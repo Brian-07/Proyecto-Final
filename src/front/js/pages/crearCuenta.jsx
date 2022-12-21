@@ -106,6 +106,8 @@ function CreateAccount() {
                 </label>
                 <input
                   type="password"
+                  name="password1"
+                  autoComplete="password1"
                   className="form-control border-gradient border-gradient-purple"
                   id="password1"
                   placeholder="********"
@@ -121,6 +123,8 @@ function CreateAccount() {
                 </label>
                 <input
                   type="password"
+                  name="password2"
+                  autoComplete="password2"
                   className="form-control border-gradient border-gradient-purple"
                   id="password2"
                   placeholder="********"

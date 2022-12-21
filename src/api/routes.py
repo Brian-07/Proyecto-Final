@@ -17,6 +17,7 @@ api = Blueprint('api', __name__)
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 
+"----------CREAR CUENTA----------------------"
 @api.route('/crear_cuenta', methods=["POST"])
 def crear_cuenta():
     body = request.get_json()
@@ -55,6 +56,7 @@ def crear_cuenta():
     except:
         return jsonify({"msg": "Error! Usuario/Email ya existente!"}), 400
 
+"----------LOGIN---------------------"
 @api.route('/login', methods=["POST"])
 def login():
     body = request.get_json()
@@ -77,4 +79,45 @@ def login():
 
     token = create_access_token(identity={"rol": "usuario", "data": user.serialize()})
     return jsonify({"msg": None ,"data":token}),200    
-    pass
+
+"-------------PAGINAS PRIVADAS-------------------"  
+@api.route('/privado', methods=["GET"])
+@jwt_required()
+def privado():
+    data = get_jwt_identity()
+    if data["rol"] == "usuario":
+        pass
+    return jsonify(data)
+
+"-------------MODIFICAR DATOS PERSONALES-------------------"  
+@api.route('/datos_personales/<id>', methods=["PUT"])
+def datos_personales(id):
+    usuario = User.query.get(id)
+
+    if usuario is None:
+        return jsonify({"msg": "No existe el Personaje con id: " + str(id)}), 400
+        
+    body = request.get_json()
+
+    nombre = body.get("nombre")
+    apellido = body.get("apellido")
+    domicilio = body.get("domicilio")
+    localidad = body.get("localidad")
+    provincia = body.get("provincia")
+    CP = body.get("CP")
+    DNI = body.get("DNI")
+
+    try:
+        usuario.nombre = body.get('nombre')
+        usuario.apellido = body.get('apellido')
+        usuario.domicilio = body.get('domicilio')
+        usuario.localidad = body.get('localidad')
+        usuario.provincia = body.get('provincia')
+        usuario.CP = body.get('CP')
+        usuario.DNI = body.get('DNI')
+        
+        db.session.commit()
+
+        return jsonify({"msg": None,"data" : usuario.serialize()}),200
+    except:
+        return jsonify({"msg": "No se pudieron cargar los datos!","data" : None}),400

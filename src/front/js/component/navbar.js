@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 
 export const Navbar = () => {
+  const [visualizar,setVisualizar] = useState(false)
+  useEffect(() => {
+    const tokenObj = localStorage.token;
+    if (!tokenObj) {
+      setVisualizar(true)
+    }
+  }, []);
+
   return (
     <nav className="navbar navbar-dark bg-dark fixed-top container-fluid ">
       <div className="container d-flex justify-content-start col-9">
@@ -19,14 +28,17 @@ export const Navbar = () => {
           <h2 className="navbar-brand ms-2 mt-2">PetShop Café</h2>
         </Link>
       </div>
+      {/* Carrito */}
       <div className="d-flex justify-content-end">
         <li className="nav-item dropdown d-flex justify-content-end container">
           <a
             className="nav-link dropdown-toggle"
+            id="iconoKart"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            hidden={visualizar}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,14 +72,17 @@ export const Navbar = () => {
           </ul>
         </li>
       </div>
+      {/* Corazon */}
       <div className="d-flex justify-content-end">
         <li className="nav-item dropdown d-flex justify-content-end container">
           <a
+            id="iconoCorazon"
             className="nav-link dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            hidden={visualizar}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,14 +119,17 @@ export const Navbar = () => {
           </ul>
         </li>
       </div>
+      {/* Sesion */}
       <div className="d-flex justify-content-end">
         <li className="nav-item dropdown d-flex justify-content-end container">
           <a
+            id="iconoSesion"
             className="nav-link dropdown-toggle "
             href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            hidden={visualizar}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
