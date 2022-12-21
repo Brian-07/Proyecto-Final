@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../styles/footer.css";
+import { Link } from 'react-router-dom';
 
 const date = new Date();
 
@@ -7,10 +8,10 @@ export const Footer = () => (
   <>
     <div>
       <ul className="nav justify-content-center border-bottom pb-1 mb-0">
-        <li className="nav-item"><a href="#" className="nav-link px-2 text-dark text-footer">Inicio</a></li>
-        <li className="nav-item"><a href="#" className="nav-link px-2 text-dark text-footer">Nosotros</a></li>
-        <li className="nav-item"><a href="#" className="nav-link px-2 text-dark text-footer">Preguntas frecuentes</a></li>
-        <li className="nav-item"><a href="#" className="nav-link px-2 text-dark text-footer">Contáctanos</a></li>
+        <li className="nav-item"><Link to="/" className="nav-link px-2 text-dark text-footer">Inicio</Link></li>
+        <li className="nav-item"><Link to="/nosotros"className="nav-link px-2 text-dark text-footer">Nosotros</Link></li>
+        <li className="nav-item"><Link to="/FAQ" className="nav-link px-2 text-dark text-footer">Preguntas frecuentes</Link></li>
+        <li className="nav-item"><Link to="/contacta_nosotros"className="nav-link px-2 text-dark text-footer">Contáctanos</Link></li>
       </ul>
     </div>
     <div>

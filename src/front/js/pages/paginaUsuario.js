@@ -58,7 +58,7 @@ export const PagUsuario = () => {
               <a href="/carrito" className="nav-link px-2 text-muted">
                 Compras
               </a>
-              <a href="/lista_favoritos" className="nav-link px-2 text-muted">
+              <a href="/favoritos" className="nav-link px-2 text-muted">
                 Lista de Favoritos
               </a>
             </div>

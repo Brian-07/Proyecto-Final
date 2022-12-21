@@ -78,3 +78,30 @@ def login():
     token = create_access_token(identity={"rol": "usuario", "data": user.serialize()})
     return jsonify({"msg": None ,"data":token})    
     pass
+
+@api.route ('/crear_producto', methods=["POST"])
+def crear_producto():
+    productoId=request.json.get("productoId",None)
+    titulo=request.json.get("titulo",None)
+    descripcion=request.json.get("descripcion",None)
+    detalles=request.json.get("detalles",None)
+    precio=request.json.get("precio",None)
+    vendedor=request.json.get("vendedor",None)
+    subCategoria=request.json.get("subCategoria",None)
+    users=request.json.get("users",None)
+
+    producto = Producto(productoId=productoId,titulo=titulo, descripcion=descripcion, detalles=detalles, precio=precio)
+
+    db.session.add(producto)
+    db.session.commit()
+
+    return jsonify({producto:producto})
+
+@api.route ('/store', methods=["GET"])
+def store():
+    #especificar tabla del back al front#
+    productos=Producto.query.order_by(Producto.productoId.asc())
+    productos=list(map(lambda producto:producto.serialize(),productos))
+
+    return jsonify({"productos":productos}), 200
+

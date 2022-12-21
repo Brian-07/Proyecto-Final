@@ -19,6 +19,7 @@ export const Navbar = () => {
           <h2 className="navbar-brand ms-2 mt-2">PetShop Café</h2>
         </Link>
       </div>
+      {/* Carrito icono */}
       <div className="d-flex justify-content-end">
         <li className="nav-item dropdown d-flex justify-content-end container">
           <a
@@ -60,8 +61,10 @@ export const Navbar = () => {
           </ul>
         </li>
       </div>
+      {/*Favorito icono */}
       <div className="d-flex justify-content-end">
         <li className="nav-item dropdown d-flex justify-content-end container">
+          
           <a
             className="nav-link dropdown-toggle"
             href="#"
@@ -130,32 +133,32 @@ export const Navbar = () => {
           </a>
           <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
             <li>
-              <a className="dropdown-item" href="#">
+              <Link to="/pag_usuario" className="dropdown-item">
                 Tú Cuenta
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link to="/carrito" className="dropdown-item">
                 Compras
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link to="/favoritos" className="dropdown-item" >
                 Lista Favoritos
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link to="/mis_articulos" className="dropdown-item">
                 Mis Artículos
-              </a>
+              </Link>
             </li>
             <li>
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link to="/" className="dropdown-item">
                 Cerrar Sesión
-              </a>
+              </Link>
             </li>
           </ul>
         </li>

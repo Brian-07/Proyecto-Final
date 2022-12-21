@@ -74,10 +74,10 @@ class Producto(db.Model):
     def serialize(self):
         return {
             "productoId": self.productoId,
-            "Titulo": self.Titulo,
-            "Descripcion": self.Descripcion,
-            "Detalles": self.Detalles,
-            "Precio": self.Precio,
+            "titulo": self.titulo,
+            "descripcion": self.descripcion,
+            "detalles": self.detalles,
+            "precio": self.precio,
         }
 
 class Imagenes(db.Model):
